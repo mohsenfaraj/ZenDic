@@ -19,6 +19,8 @@ public final class Translator {
     boolean isDataChanged = false ;
     public Translator(String database , String mainLang , String targetLang) {
         try {
+        this.mainLang = mainLang ;
+        this.targetLang = targetLang ;
         File input = new File(database) ; 
         Scanner fr = new Scanner(input);
         while (fr.hasNextLine()){
@@ -29,8 +31,6 @@ public final class Translator {
             String persianword = temparr[1] ;
             mainWords.add(englishword);
             targetWords.add(persianword);
-            this.mainLang = mainLang ;
-            this.targetLang = targetLang ;
         }
         fr.close();
         }catch(FileNotFoundException e) {
