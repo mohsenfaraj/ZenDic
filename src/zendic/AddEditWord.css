@@ -1,0 +1,38 @@
+.root {
+    -fx-background-color: transparent ;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 20, 0.5, 0.0, 0.0);
+    -fx-background-insets: 10;
+}
+
+GridPane , HBox , VBox{
+    -fx-alignment: center ;
+    -fx-spacing: 10 ;
+    -fx-padding: 10;
+}
+.text-field {
+    -fx-background-color: transparent ;
+    -fx-border-color : #333 ;
+    -fx-text-fill:  #F9A825 ;
+    -fx-border-radius: 5 ;
+}
+.text-field:focused {
+    -fx-border-color : #F9A825 ;
+}
+.label {
+    -fx-text-fill : #aaa ;
+    -fx-font-size:16px ;
+}
+.button {
+    -fx-background-color: transparent ;
+    -fx-text-fill: #F9A825 ;
+    -fx-font-size: 16px ;
+    -fx-border-color: #333 ;
+    -fx-border-radius: 5 ;
+    -fx-background-radius: 5 ;
+}
+.greybox {
+    -fx-background-color : #191919 ;
+    -fx-border-color: #333 ;
+    -fx-border-radius: 5 ;
+    -fx-background-radius: 5 ;
+}

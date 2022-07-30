@@ -1,0 +1,105 @@
+.root {
+    -fx-background-color: transparent ;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 20, 0.5, 0.0, 0.0);
+    -fx-background-insets: 10;
+    -fx-border-radius: 30;
+}
+
+.mylistview .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #F9A825;
+    -fx-text-fill: #000;
+}
+.mylistview .list-cell {
+	-fx-background-color: none;
+    -fx-text-fill: #F9A825;
+}
+/* The main scrollbar CSS class of ListView */
+.mylistview .scroll-bar:horizontal ,
+.mylistview .scroll-bar:vertical{
+    -fx-background-color:transparent;
+    -fx-border-radius: 5 ;
+}
+.mylistview .scroll-bar:horizontal {
+    -fx-scale-x: 0 ;
+    -fx-padding: -10; 
+    -fx-opacity: 0;
+}
+.mylistview .corner {
+    -fx-opacity: 0 ;
+    -fx-scale-x: -1 ;
+    -fx-scale-y:-1 ;
+    -fx-background-color: transparent ;
+    visibility: hidden ;
+}
+/* The main scrollbar **track** CSS class  */
+.mylistview .scroll-bar:horizontal .track ,
+.mylistview .scroll-bar:vertical .track{
+     -fx-background-color: transparent;
+}
+ .mylistview .scroll-bar:horizontal ,
+.mylistview .scroll-bar:vertical{
+     -fx-background-color: transparent;
+	 -fx-border-color : #333 ;
+}
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.mylistview .scroll-bar:horizontal .thumb,
+.mylistview .scroll-bar:vertical .thumb {
+    -fx-background-color:#F9A825;
+	-fx-background-insets: 0, 0, 0;
+	-fx-background-radius: 0em;
+        -fx-background-radius: 3;
+ 
+}
+.mylistview .scroll-bar:horizontal .increment-button ,
+.mylistview .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0; 
+}
+.mylistview .scroll-bar .increment-button:hover ,
+.mylistview .scroll-bar .decrement-button:hover {
+    -fx-background-color:transparent;
+}
+.mylistview  {
+    -fx-background-color: transparent;
+}
+
+
+.mymenu{
+	-fx-background-color: transparent ;
+}
+.mymenu .menu .label {
+	-fx-text-fill : #F9A825 ;
+}
+.mymenu .menu:hover,
+.mymenu .menu:showing {
+	-fx-background-color: #F9A825 ;
+        -fx-background-radius: 5 ;
+}
+.mymenu .menu:hover .label ,
+.mymenu .menu:showing .label {
+	-fx-text-fill : #191919 ;
+}
+.mymenu .menu .context-menu {
+    -fx-background-color: #191919 ;
+}
+.mymenu .menu .menu-item .label {
+	-fx-text-fill : #F9A825 ;
+}
+.mymenu .menu .menu-item:focused {
+	-fx-background-color:#F9A825 ;
+        -fx-background-radius: 5 ;
+}
+.mymenu .menu .menu-item:focused .label {
+	-fx-text-fill:#191919 ;
+	
+}
+.searchbox {
+    -fx-background-color: #202020 ;
+    -fx-border-color : #333 ;
+    -fx-text-fill:  #F9A825 ;
+    -fx-border-radius: 5 ;
+}
+.searchbox:focused {
+    -fx-border-color : #F9A825 ;
+}

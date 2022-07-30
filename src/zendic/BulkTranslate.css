@@ -1,0 +1,89 @@
+.root {
+    -fx-background-color: transparent ;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 20, 0.5, 0.0, 0.0);
+    -fx-background-insets: 10;
+}
+
+GridPane , HBox , VBox{
+    -fx-alignment: center ;
+    -fx-spacing: 10 ;
+    -fx-padding: 10;
+}
+.inputtxt {
+    -fx-border-color : #333 ;
+    -fx-text-fill:  #F9A825 ;
+    -fx-border-radius: 5 ;
+    -fx-font-size : 16px ;
+    -fx-background-color: transparent;
+}
+.inputtxt .content {
+        -fx-background-color:#191919 ;
+}
+.inputtxt:focused {
+    -fx-border-color : #F9A825 ;
+}
+/* The main scrollbar CSS class of ListView */
+.inputtxt .scroll-bar:horizontal ,
+.inputtxt .scroll-bar:vertical{
+    -fx-background-color:transparent;
+    -fx-border-radius: 5 ;
+}
+.inputtxt .scroll-bar:horizontal {
+    -fx-scale-x: 0 ;
+    -fx-padding: -10; 
+    -fx-opacity: 0;
+}
+.inputtxt .corner {
+    -fx-opacity: 0 ;
+    -fx-scale-x: -1 ;
+    -fx-scale-y:-1 ;
+    -fx-background-color: transparent ;
+    visibility: hidden ;
+}
+/* The main scrollbar **track** CSS class  */
+.inputtxt .scroll-bar:horizontal .track ,
+.inputtxt .scroll-bar:vertical .track{
+     -fx-background-color: transparent;
+}
+ .inputtxt .scroll-bar:horizontal ,
+.inputtxt .scroll-bar:vertical{
+     -fx-background-color: transparent;
+	 -fx-border-color : #333 ;
+}
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.inputtxt .scroll-bar:horizontal .thumb,
+.inputtxt .scroll-bar:vertical .thumb {
+    -fx-background-color:#F9A825;
+	-fx-background-insets: 0, 0, 0;
+	-fx-background-radius: 0em;
+        -fx-background-radius: 3;
+ 
+}
+.inputtxt .scroll-bar:horizontal .increment-button ,
+.inputtxt .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0; 
+}
+.inputtxt .scroll-bar .increment-button:hover ,
+.inputtxt .scroll-bar .decrement-button:hover {
+    -fx-background-color:transparent;
+}
+.label {
+    -fx-text-fill : #aaa ;
+    -fx-font-size:16px ;
+}
+.button {
+    -fx-background-color: transparent ;
+    -fx-text-fill: #F9A825 ;
+    -fx-font-size: 16px ;
+    -fx-border-color: #333 ;
+    -fx-border-radius: 5 ;
+    -fx-background-radius: 5 ;
+}
+.greybox {
+    -fx-background-color : #191919 ;
+    -fx-border-color: #333 ;
+    -fx-border-radius: 5 ;
+    -fx-background-radius: 5 ;
+}
