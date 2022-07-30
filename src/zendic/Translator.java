@@ -9,10 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import zendic.Huffman.Huffman ;
 
 public final class Translator {
-    Huffman huff = new Huffman() ;
     ArrayList <String> mainWords = new ArrayList<>();
     ArrayList <String> targetWords = new ArrayList<>() ;
     Suggester trie ;
@@ -21,8 +19,6 @@ public final class Translator {
     boolean isDataChanged = false ;
     public Translator(String database , String mainLang , String targetLang) {
         try {
-//        DECOMPRESS
-//        huff.decompressFile(database + ".comp", database);
         File input = new File(database) ; 
         Scanner fr = new Scanner(input);
         while (fr.hasNextLine()){
@@ -131,8 +127,6 @@ public final class Translator {
             DataWriter dw = new DataWriter() ;
             String filename = mainLang + "to" + targetLang + ".csv" ;
             dw.writeArrayintoFile(mainWords, targetWords, filename);
-            //COMPRESS
-//            huff.compressFile(filename , filename + ".comp");
         }
     }
 }
