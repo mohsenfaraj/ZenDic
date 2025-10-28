@@ -1,4 +1,4 @@
-package zendic;
+package ir.mohsenfaraj.zendic;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -16,6 +17,9 @@ public class ZenDic extends Application {
     MainController controller ;
     @Override
     public void start(Stage stage) throws Exception {
+        // load custom fonts
+        Font.loadFont(getClass().getResourceAsStream("/fonts/Vazirmatn-Regular.ttf"), 14);
+        Font.loadFont(getClass().getResourceAsStream("/fonts/Vazirmatn-Bold.ttf"), 14);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
         Parent root = (Parent)loader.load();
         controller = (MainController)loader.getController();

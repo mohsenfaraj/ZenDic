@@ -1,4 +1,4 @@
-package zendic;
+package ir.mohsenfaraj.zendic ;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
@@ -7,8 +7,6 @@ import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Platform;
 
 
@@ -46,9 +44,9 @@ public class ClipboardManager implements Runnable{
                     }
             }
         } catch (UnsupportedFlavorException | IOException ex) {
-            Logger.getLogger(ClipboardManager.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         } catch (InterruptedException ex) {
-            Logger.getLogger(ClipboardManager.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
     }
     public void contentChanged(String data) {

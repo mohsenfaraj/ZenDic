@@ -1,11 +1,9 @@
-package zendic;
+package ir.mohsenfaraj.zendic ;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class DataWriter {
     public void writeArrayintoFile(ArrayList<String> main , ArrayList<String> target , String filename){
@@ -27,7 +25,7 @@ public class DataWriter {
             }
             fr.close();
         } catch (IOException ex) {
-            Logger.getLogger(DataWriter.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
 
     }

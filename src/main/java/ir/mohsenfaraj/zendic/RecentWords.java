@@ -1,4 +1,4 @@
-package zendic;
+package ir.mohsenfaraj.zendic ;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package zendic;
+package ir.mohsenfaraj.zendic ;
 
 public class Util {
     /**

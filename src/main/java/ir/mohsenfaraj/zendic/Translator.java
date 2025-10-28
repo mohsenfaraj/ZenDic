@@ -1,14 +1,14 @@
-package zendic;
+package ir.mohsenfaraj.zendic ;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public final class Translator {
     ArrayList <String> mainWords = new ArrayList<>();
@@ -21,7 +21,9 @@ public final class Translator {
         try {
         this.mainLang = mainLang ;
         this.targetLang = targetLang ;
-        File input = new File(database) ; 
+        Path currentPath = Paths.get(System.getProperty("user.dir"));
+        Path filePath = Paths.get(currentPath.toString(), database);
+        File input = new File(filePath.toString()) ; 
         Scanner fr = new Scanner(input);
         while (fr.hasNextLine()){
             String text = fr.nextLine() ;
@@ -62,7 +64,7 @@ public final class Translator {
         try {
             link = "http://translate.google.com/#" + mainLang + "/" + targetLang + "/" + URLEncoder.encode(word,"UTF-8");
         } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(Translator.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return link ;
     }
